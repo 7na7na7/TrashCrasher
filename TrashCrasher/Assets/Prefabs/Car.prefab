@@ -465,7 +465,7 @@ MonoBehaviour:
   isBack: 1
   isFront: 1
   jumpForce: 1000
-  qeSpeed: 50
+  qeSpeed: 350
   MaxSpeed: 12
   carRigidbody: {fileID: 1669716124068237606}
   backTire: {fileID: 1669716124134439249}
