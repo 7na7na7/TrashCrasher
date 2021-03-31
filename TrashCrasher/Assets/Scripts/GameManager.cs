@@ -36,4 +36,9 @@ public class GameManager : MonoBehaviour
         GameoverPanel.SetActive(false);
         Instantiate(Car, transform.position, quaternion.identity);
     }
+
+    public void GameOver()
+    {
+        GameoverPanel.SetActive(true);
+    }
 }
