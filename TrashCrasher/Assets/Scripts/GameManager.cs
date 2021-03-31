@@ -27,18 +27,39 @@ public class GameManager : MonoBehaviour
     public Image[] timingBelts;
     
     
-    public GameObject GameoverPanel;
+    public GameObject GameOverPannel;
     public GameObject Car;
-    
+
+    private GameObject PlayerCar;
+
+    public static GameManager instance = null;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     public void StartGame()
     {
-        GameoverPanel.SetActive(false);
-        Instantiate(Car, transform.position, quaternion.identity);
+        if(PlayerCar)
+        {
+            Destroy(PlayerCar);
+        }
+
+        GameOverPannel.SetActive(false);
+        PlayerCar = Instantiate(Car, transform.position, quaternion.identity);
     }
 
     public void GameOver()
     {
-        GameoverPanel.SetActive(true);
+        GameOverPannel.SetActive(true);
     }
 }

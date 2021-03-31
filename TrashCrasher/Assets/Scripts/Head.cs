@@ -10,7 +10,7 @@ public class Head : MonoBehaviour
    {
       if (other.CompareTag("Respawn"))
       {
-          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.instance.GameOver();    
       }
    }
 }

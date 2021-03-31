@@ -260,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669716123294484679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.797, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1669716124068237601}
@@ -332,7 +332,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.35
 --- !u!50 &1669716123294484696
 Rigidbody2D:
   serializedVersion: 4
@@ -352,7 +352,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!235 &1669716123294484699
 WheelJoint2D:
@@ -369,7 +369,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.79699993, y: 0.14999998}
+  m_ConnectedAnchor: {x: 0.8, y: 0.15}
   m_Suspension:
     m_DampingRatio: 1
     m_Frequency: 999999
@@ -500,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669716124134439260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.821, y: 0.175, z: 0}
+  m_LocalPosition: {x: -0.8, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1669716124068237601}
@@ -572,7 +572,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.35
 --- !u!50 &1669716124134439249
 Rigidbody2D:
   serializedVersion: 4
@@ -609,7 +609,7 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.8210001, y: 0.17499995}
+  m_ConnectedAnchor: {x: -0.8, y: 0.15}
   m_Suspension:
     m_DampingRatio: 1
     m_Frequency: 999999
