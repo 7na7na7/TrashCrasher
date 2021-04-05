@@ -635,3 +635,83 @@ System memory in use after: 89.7 MB.
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2237.
 Total: 1.588500 ms (FindLiveObjects: 0.165400 ms CreateObjectMapping: 0.055800 ms MarkObjects: 1.354100 ms  DeleteObjects: 0.012400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002236 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001F57D0E9010 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A3702B00 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D697020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A3D34020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A3736030 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57CFBB020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F554C50970 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57CFBB020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57CFBB020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A2F5D010 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A313A040 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D697020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A148A070 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A15B4020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57C897C00 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D27EA90 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D161000 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D697020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A2039020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A484A000 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57CB8CE30 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A1A93010 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D1BB030 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A36007E0 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A3CE4770 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A148A070 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F57D697020 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001F3A2B1F010 doesn't match image C:\Users\mingu\Documents\GitHub\TC\TrashCrasher\TrashCrasher\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.783 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1766 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.6 MB.
+System memory in use after: 89.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2239.
+Total: 2.265100 ms (FindLiveObjects: 0.197100 ms CreateObjectMapping: 0.071500 ms MarkObjects: 1.973200 ms  DeleteObjects: 0.021900 ms)
+
