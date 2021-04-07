@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     private string timingBelKey = "timingBeltKey";
     public Image timingBelt;
     public Image[] timingBelts;
-    
+
+    public Animator UpgradePanelAnimator;
     
     public GameObject GameOverPannel;
     public GameObject Car;
@@ -54,12 +55,12 @@ public class GameManager : MonoBehaviour
             Destroy(PlayerCar);
         }
 
-        GameOverPannel.SetActive(false);
+        UpgradePanelAnimator.SetBool("IsUp", true);
         PlayerCar = Instantiate(Car, transform.position, quaternion.identity);
     }
 
     public void GameOver()
     {
-        GameOverPannel.SetActive(true);
+        UpgradePanelAnimator.SetBool("IsUp", false);
     }
 }
