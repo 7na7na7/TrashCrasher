@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text goldText;
     private string tireKey = "tireKey";
     public Image tire;
     public Image[] tires;
@@ -48,6 +49,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        goldText.text = "남은 돈 : " + GoldManager.instance.Gold + " G";
+
+    }
+
     public void StartGame()
     {
         if(PlayerCar)
@@ -57,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         UpgradePanelAnimator.SetBool("IsUp", true);
         PlayerCar = Instantiate(Car, transform.position, quaternion.identity);
+        
     }
 
     public void GameOver()

@@ -56,4 +56,13 @@ public class CarCtrl : MonoBehaviour
         }
         //carRigidbody.AddTorque(-movement*carTorque*speed*Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Gold"))
+        {
+            Destroy(other.gameObject);
+            GoldManager.instance.GetGold(10);
+        }
+    }
 }
