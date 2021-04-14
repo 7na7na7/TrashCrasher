@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GoldManager : MonoBehaviour
 {
+    public int PrevGold;
     public int Gold = 0;
     private string goldKey = "goldKey";
     public static GoldManager instance;
+
+    public Text goldText;
 
     private void Awake()
     {
@@ -40,6 +44,20 @@ public class GoldManager : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void CheckScore()
+    {
+        StartCoroutine(PlusGold());   
+    }
+
+    public  IEnumerator PlusGold()
+    {
+        while (PrevGold < Gold)
+        {
+            PrevGold++;
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

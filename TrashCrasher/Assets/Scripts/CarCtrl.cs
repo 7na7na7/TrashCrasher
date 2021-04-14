@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CarCtrl : MonoBehaviour
 {
+
     public bool isBack = true;
     public bool isFront = true;
     public float jumpForce = 1000;
@@ -15,6 +16,7 @@ public class CarCtrl : MonoBehaviour
     private float movement;
   //  public float carTorque = 10;
     public float speed = 10;
+
     void Start()
     {
         FindObjectOfType<CameraManager>().target = this.gameObject;
@@ -66,5 +68,10 @@ public class CarCtrl : MonoBehaviour
             Destroy(other.gameObject);
             GoldManager.instance.GetGold(10);
         }
+    }
+
+    public void StopMovement()
+    {
+        carRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 }

@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public Animator UpgradePanelAnimator;
     
     public GameObject GameOverPannel;
+    public GameObject ScorePannel;
+
     public GameObject Car;
 
     private GameObject PlayerCar;
@@ -64,11 +66,22 @@ public class GameManager : MonoBehaviour
 
         UpgradePanelAnimator.SetBool("IsUp", true);
         PlayerCar = Instantiate(Car, transform.position, quaternion.identity);
-        
+
+        GoldManager.instance.PrevGold = GoldManager.instance.Gold;
     }
 
     public void GameOver()
     {
+        PlayerCar.GetComponent<CarCtrl>().StopMovement();
+
         UpgradePanelAnimator.SetBool("IsUp", false);
+        ScorePannel.SetActive(true);
+        GoldManager.instance.CheckScore();
     }
+
+    public void AfterCheckScore()
+    {
+        ScorePannel.SetActive(false);
+    }
+
 }
