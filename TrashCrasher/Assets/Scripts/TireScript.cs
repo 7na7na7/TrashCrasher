@@ -7,9 +7,9 @@ public class TireScript : MonoBehaviour
 {
     public bool isback = true;
     public CarCtrl car;
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.collider.CompareTag("Respawn"))
+        if (other.CompareTag("Respawn"))
         {
             if (isback)
                 car.isBack = true;
@@ -18,9 +18,9 @@ public class TireScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.collider.CompareTag("Respawn"))
+        if (other.CompareTag("Respawn"))
         {
             if (isback)
                 car.isBack = false;

@@ -39,8 +39,10 @@ public class CarCtrl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(isBack && isFront) 
-                carRigidbody.AddForce(Vector2.up*jumpForce);
+            if (isBack && isFront)
+            {
+                carRigidbody.AddForce(transform.up*jumpForce);
+            }
         }
             
     }
