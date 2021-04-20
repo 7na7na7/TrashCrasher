@@ -11,6 +11,8 @@ public class GoldManager : MonoBehaviour
     private string goldKey = "goldKey";
     public static GoldManager instance;
 
+    public Text weightText;
+    public Text distanceText;
     public Text goldText;
 
     private void Awake()
@@ -47,16 +49,37 @@ public class GoldManager : MonoBehaviour
         }
     }
 
-    public void CheckScore()
+    public void CheckScore(float trashWeight, float moveDistance)
     {
-        StartCoroutine(PlusGold());   
+        StartCoroutine(PlusGold(trashWeight, moveDistance));   
     }
 
-    public  IEnumerator PlusGold()
+    public  IEnumerator PlusGold(float trashWeight, float moveDistance)
     {
+        float point = 0;
+
+        float _trashWeight = 0;
+
+        float _moveDistance = 0;
+
+        while(_trashWeight < trashWeight)
+        {
+            _trashWeight++;
+            weightText.text = _trashWeight.ToString();
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        while (_moveDistance < moveDistance)
+        {
+            _moveDistance++;
+            distanceText.text = _moveDistance.ToString();
+            yield return new WaitForSeconds(0.02f);
+        }
+
         while (PrevGold < Gold)
         {
             PrevGold++;
+            goldText.text = PrevGold.ToString();
             yield return new WaitForSeconds(0.02f);
         }
     }

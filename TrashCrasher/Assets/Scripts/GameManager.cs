@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
+    float trashWeight = 0.0f;
+    float moveDistance = 0.0f;
+
     void Awake()
     {
         if (instance == null)
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         UpgradePanelAnimator.SetBool("IsUp", false);
         ScorePannel.SetActive(true);
-        GoldManager.instance.CheckScore();
+        GoldManager.instance.CheckScore(trashWeight, moveDistance);
     }
 
     public void AfterCheckScore()
