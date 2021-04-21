@@ -5,27 +5,41 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class Spr
+{
+    public Sprite[] sprs;
+}
 public class GameManager : MonoBehaviour
 {
     public Text goldText;
-    private string tireKey = "tireKey";
-    public Image tire;
-    public Image[] tires;
-    private string engineKey = "engineKey";
-    public Image engine;
-    public Image[] engines;
-    private string oilKey = "oilKey";
-    public Image oil;
-    public Image[] oils;
-    private string bumperKey = "bumperKey";
-    public Image bumper;
-    public Image[] bumpers;
-    private string trashPullerKey = "trashPullerKey";
-    public Image trashPuller;
-    public Image[] trashPullers;
-    private string timingBelKey = "timingBeltKey";
-    public Image timingBelt;
-    public Image[] timingBelts;
+    private string tireKey = "0";
+     
+       private string engineKey = "1";
+       private string oilKey = "2";
+       private string bumperKey = "3";
+       private string trashPullerKey = "4";
+       private string timingBelKey = "5";
+       public Spr[] sprites;
+       private int[] upgradecount=new int[6];
+       public Image[] images;
+       public void Upgrade(int index)
+       {
+           if (upgradecount[index] + 1 < sprites[index].sprs.Length)
+           {
+               upgradecount[index]++;
+               PlayerPrefs.SetInt(index.ToString(),upgradecount[index]);
+               set();   
+           }
+       }
+       void set()
+       {
+           for (int i = 0; i < upgradecount.Length; i++)
+           {
+               upgradecount[i] = PlayerPrefs.GetInt(i.ToString(), 0);
+               images[i].sprite = sprites[i].sprs[upgradecount[i]];
+           }
+       }
 
     public Animator UpgradePanelAnimator;
     
@@ -52,6 +66,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        set();
     }
 
     private void Update()
