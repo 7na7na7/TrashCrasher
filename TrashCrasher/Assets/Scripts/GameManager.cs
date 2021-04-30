@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
            {
                upgradecount[i] = PlayerPrefs.GetInt(i.ToString(), 0);
                images[i].sprite = sprites[i].sprs[upgradecount[i]];
-               lvTexts[i].text = "Lv "+upgradecount[i]+1;
+               lvTexts[i].text = "Lv "+((int)upgradecount[i]+1).ToString();
            }
        }
 
