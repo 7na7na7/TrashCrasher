@@ -12,6 +12,7 @@ public class Spr
 }
 public class GameManager : MonoBehaviour
 {
+    public Text[] lvTexts;
     public Text goldText;
     private string tireKey = "0";
      
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
            {
                upgradecount[i] = PlayerPrefs.GetInt(i.ToString(), 0);
                images[i].sprite = sprites[i].sprs[upgradecount[i]];
+               lvTexts[i].text = "Lv "+upgradecount[i]+1;
            }
        }
 

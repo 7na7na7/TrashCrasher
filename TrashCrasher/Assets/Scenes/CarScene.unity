@@ -5650,6 +5650,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df08925f12c1e4e40b3e797422f50623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvTexts:
+  - {fileID: 47234705}
+  - {fileID: 593573158}
+  - {fileID: 1529525809}
+  - {fileID: 2118774769}
+  - {fileID: 659967166}
+  - {fileID: 1372478153}
   goldText: {fileID: 973576111}
   sprites:
   - sprs:
