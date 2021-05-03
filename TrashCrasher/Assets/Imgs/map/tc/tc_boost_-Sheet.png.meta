@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: 4350429171891108068
     second: tc_upgrade_boost_-Sheet_2
+  - first:
+      213: -4628604140710189700
+    second: tc_boost_-Sheet_0
+  - first:
+      213: -6542170155744958133
+    second: tc_boost_-Sheet_1
+  - first:
+      213: -2059129129023435761
+    second: tc_boost_-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tc_upgrade_boost_-Sheet_0
+      name: tc_boost_-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 114
+        x: 50
+        y: 74
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f90fa0e225ed580a0800000000000000
-      internalID: -6879848411197411169
+      spriteID: c752113be05e3cfb0800000000000000
+      internalID: -4628604140710189700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tc_upgrade_boost_-Sheet_1
+      name: tc_boost_-Sheet_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 114
+        x: 210
+        y: 75
+        width: 40
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b914be81319a31d20800000000000000
-      internalID: 3248125655751803291
+      spriteID: b49e8aeb7ea8535a0800000000000000
+      internalID: -6542170155744958133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tc_upgrade_boost_-Sheet_2
+      name: tc_boost_-Sheet_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 160
-        height: 114
+        x: 370
+        y: 75
+        width: 40
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e8f0134844df5c30800000000000000
-      internalID: 4350429171891108068
+      spriteID: f0c06e587f08c63e0800000000000000
+      internalID: -2059129129023435761
       vertices: []
       indices: 
       edges: []

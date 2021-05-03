@@ -127,10 +127,10 @@ TextureImporter:
       name: tc_icon_boost_-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 114
+        x: 50
+        y: 74
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: tc_icon_boost_-Sheet_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 114
+        x: 210
+        y: 74
+        width: 40
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: tc_icon_boost_-Sheet_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 160
-        height: 114
+        x: 370
+        y: 74
+        width: 40
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -2380,7 +2380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1011191688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5661,18 +5661,22 @@ MonoBehaviour:
   sprites:
   - sprs:
     - {fileID: 3159185530761366263, guid: 4e238a315c1b1424984504e2eaa84415, type: 3}
+    - {fileID: -3540594871774975803, guid: 4e238a315c1b1424984504e2eaa84415, type: 3}
+    - {fileID: 4935004481484544222, guid: 4e238a315c1b1424984504e2eaa84415, type: 3}
   - sprs:
     - {fileID: 21300000, guid: 9b8dd3aa9ccf4fb45a1132337861944b, type: 3}
   - sprs:
-    - {fileID: -5384468852985065193, guid: 76c327035523c94499895f343e9050c1, type: 3}
-    - {fileID: 3555504238597556917, guid: 76c327035523c94499895f343e9050c1, type: 3}
     - {fileID: 8840110002130058382, guid: 76c327035523c94499895f343e9050c1, type: 3}
+    - {fileID: 3555504238597556917, guid: 76c327035523c94499895f343e9050c1, type: 3}
+    - {fileID: -5384468852985065193, guid: 76c327035523c94499895f343e9050c1, type: 3}
   - sprs:
-    - {fileID: 21300000, guid: bc823c8fe196296419b6deea90e1522b, type: 3}
+    - {fileID: -1423019807376266851, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
+    - {fileID: -6185998330088389341, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
+    - {fileID: 1855732101926705571, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
   - sprs:
-    - {fileID: -6879848411197411169, guid: eb5184217303d8b46ba27c438c23ba68, type: 3}
-    - {fileID: 3248125655751803291, guid: eb5184217303d8b46ba27c438c23ba68, type: 3}
-    - {fileID: 4350429171891108068, guid: eb5184217303d8b46ba27c438c23ba68, type: 3}
+    - {fileID: -6141991047147693644, guid: 8c273be0bf31d3e489fe3def9a603f3e, type: 3}
+    - {fileID: 915584409645283368, guid: 8c273be0bf31d3e489fe3def9a603f3e, type: 3}
+    - {fileID: -266419432846414458, guid: 8c273be0bf31d3e489fe3def9a603f3e, type: 3}
   - sprs:
     - {fileID: -9031645975419818947, guid: 3007838ee4240d84ab9e5493c478c98e, type: 3}
     - {fileID: -3671986056126445880, guid: 3007838ee4240d84ab9e5493c478c98e, type: 3}
