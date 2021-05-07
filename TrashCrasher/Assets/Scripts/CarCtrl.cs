@@ -2,10 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarCtrl : MonoBehaviour
 {
-
+    public float boosterRegenSpeed = 1f;
+    public float boosterCost = 5f;
+    public Slider boosterGage;
+    public GameObject booster;
+    public float boosterForce=5f;
     public bool isBack = true;
     public bool isFront = true;
     public float jumpForce = 1000;
@@ -25,6 +30,7 @@ public class CarCtrl : MonoBehaviour
  
     void Update()
     {
+        boosterGage.value += boosterRegenSpeed * Time.deltaTime;
         movement = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.Q))
@@ -46,7 +52,24 @@ public class CarCtrl : MonoBehaviour
                 carRigidbody.AddForce(transform.up*jumpForce);
             }
         }
-            
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (boosterGage.value > 0)
+            {
+                boosterGage.value -= Time.deltaTime * boosterCost;   
+                carRigidbody.AddForce(transform.right*boosterForce*Time.deltaTime);
+            }
+           
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            booster.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            booster.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
