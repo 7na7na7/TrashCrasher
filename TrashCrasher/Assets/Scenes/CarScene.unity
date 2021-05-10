@@ -5210,6 +5210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df08925f12c1e4e40b3e797422f50623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldText: {fileID: 973576111}
   lvTexts:
   - {fileID: 47234705}
   - {fileID: 593573158}
@@ -5217,7 +5218,13 @@ MonoBehaviour:
   - {fileID: 2118774769}
   - {fileID: 659967166}
   - {fileID: 1372478153}
-  goldText: {fileID: 973576111}
+  upgradeCostText:
+  - {fileID: 2008783537}
+  - {fileID: 1225017798}
+  - {fileID: 1161171327}
+  - {fileID: 564739766}
+  - {fileID: 1797592870}
+  - {fileID: 2036483265}
   sprites:
   - sprs:
     - {fileID: 3159185530761366263, guid: 4e238a315c1b1424984504e2eaa84415, type: 3}

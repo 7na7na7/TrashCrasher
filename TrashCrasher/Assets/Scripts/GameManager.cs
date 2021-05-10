@@ -12,36 +12,46 @@ public class Spr
 }
 public class GameManager : MonoBehaviour
 {
-    public Text[] lvTexts;
     public Text goldText;
     private string tireKey = "0";
-     
-       private string engineKey = "1";
-       private string oilKey = "2";
-       private string bumperKey = "3";
-       private string trashPullerKey = "4";
-       private string timingBelKey = "5";
-       public Spr[] sprites;
-       private int[] upgradecount=new int[6];
-       public Image[] images;
-       public void Upgrade(int index)
-       {
-           if (upgradecount[index] + 1 < sprites[index].sprs.Length)
-           {
-               upgradecount[index]++;
-               PlayerPrefs.SetInt(index.ToString(),upgradecount[index]);
-               set();   
-           }
-       }
-       void set()
-       {
-           for (int i = 0; i < upgradecount.Length; i++)
-           {
-               upgradecount[i] = PlayerPrefs.GetInt(i.ToString(), 0);
-               images[i].sprite = sprites[i].sprs[upgradecount[i]];
-               lvTexts[i].text = "Lv "+((int)upgradecount[i]+1).ToString();
-           }
-       }
+
+    #region
+    public Text[] lvTexts;
+    public Text[] upgradeCostText;
+
+    private string engineKey = "1";
+    private string oilKey = "2";
+    private string bumperKey = "3";
+    private string trashPullerKey = "4";
+    private string timingBeltKey = "5";
+    public Spr[] sprites;
+    private int[] upgradecount = new int[6];
+    private int[] upgradeCost = new int[3] {5000, 20000, 50000}; 
+
+    public Image[] images;
+
+
+    public void Upgrade(int index)
+    {
+        if (upgradecount[index] + 1 < sprites[index].sprs.Length && upgradeCost[upgradecount[index]] < GoldManager.instance.Gold)
+        {
+            upgradecount[index]++;
+            PlayerPrefs.SetInt(index.ToString(), upgradecount[index]);
+            set();
+        }
+    }
+    void set()
+    {
+        for (int i = 0; i < upgradecount.Length; i++)
+        {
+            upgradecount[i] = PlayerPrefs.GetInt(i.ToString(), 0);
+            images[i].sprite = sprites[i].sprs[upgradecount[i]];
+            lvTexts[i].text = "Lv " + ((int)upgradecount[i] + 1).ToString();
+            upgradeCostText[i].text = ((int)upgradeCost[upgradecount[i]]).ToString() + "G";
+        }
+    }
+    #endregion //upgrade service
+
 
     public Animator UpgradePanelAnimator;
     
