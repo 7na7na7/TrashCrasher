@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 8c273be0bf31d3e489fe3def9a603f3e
+guid: 9535299c65fccb540bf281ca38fc5a67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6141991047147693644
-    second: tc_icon_boost_-Sheet_0
+      213: -6879848411197411169
+    second: tc_upgrade_boost_-Sheet_0
   - first:
-      213: 915584409645283368
-    second: tc_icon_boost_-Sheet_1
+      213: 3248125655751803291
+    second: tc_upgrade_boost_-Sheet_1
   - first:
-      213: -266419432846414458
-    second: tc_icon_boost_-Sheet_2
+      213: 4350429171891108068
+    second: tc_upgrade_boost_-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,64 +124,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tc_icon_boost_-Sheet_0
+      name: tc_upgrade_boost_-Sheet_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 74
-        width: 32
-        height: 16
+        x: 48
+        y: 57
+        width: 38
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b9d12d2fa343caa0800000000000000
-      internalID: -6141991047147693644
+      spriteID: f90fa0e225ed580a0800000000000000
+      internalID: -6879848411197411169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tc_icon_boost_-Sheet_1
+      name: tc_upgrade_boost_-Sheet_1
       rect:
         serializedVersion: 2
         x: 210
-        y: 74
+        y: 56
         width: 40
-        height: 16
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 828faca6b2fc4bc00800000000000000
-      internalID: 915584409645283368
+      spriteID: b914be81319a31d20800000000000000
+      internalID: 3248125655751803291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tc_icon_boost_-Sheet_2
+      name: tc_upgrade_boost_-Sheet_2
       rect:
         serializedVersion: 2
         x: 370
-        y: 74
+        y: 50
         width: 40
-        height: 27
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68dade7ffec7d4cf0800000000000000
-      internalID: -266419432846414458
+      spriteID: 4e8f0134844df5c30800000000000000
+      internalID: 4350429171891108068
       vertices: []
       indices: 
       edges: []
