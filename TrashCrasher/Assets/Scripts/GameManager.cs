@@ -13,19 +13,20 @@ public class Spr
 public class GameManager : MonoBehaviour
 {
     public Text goldText;
-    private string tireKey = "0";
+
+    public GameObject playButton;
 
     #region
     public Text[] lvTexts;
     public Text[] upgradeCostText;
 
-    private string engineKey = "1";
+    private string tireKey = "0";
+    private string timingbelt = "1";
     private string oilKey = "2";
     private string bumperKey = "3";
-    private string trashPullerKey = "4";
-    private string timingBeltKey = "5";
+    private string buster = "4";
     public Spr[] sprites;
-    private int[] upgradecount = new int[6];
+    private int[] upgradecount = new int[5];
     private int[] upgradeCost = new int[3] {5000, 20000, 50000}; 
 
     public Image[] images;
@@ -89,7 +90,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        if(PlayerCar)
+        playButton.SetActive(false);
+        if (PlayerCar)
         {
             Destroy(PlayerCar);
         }
@@ -102,6 +104,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        playButton.SetActive(true);
         PlayerCar.GetComponent<CarCtrl>().StopMovement();
 
         UpgradePanelAnimator.SetBool("IsUp", false);
