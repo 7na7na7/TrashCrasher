@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6658154545042419009}
   - component: {fileID: 6658154545042419008}
   - component: {fileID: 6658154545042419011}
+  - component: {fileID: -635985261259201106}
   - component: {fileID: 6658154545042419010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trash6
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -106,6 +107,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-635985261259201106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658154545042419021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0223d715f10b141886837f01e10cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 2825297786739175788, guid: 99eabc987b93dc64cb3ce3bc9fac4e5c, type: 3}
 --- !u!70 &6658154545042419010
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

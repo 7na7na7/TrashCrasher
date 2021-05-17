@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4305454378502379863}
   - component: {fileID: 4305454378502379849}
   - component: {fileID: 4305454378502379850}
-  m_Layer: 0
+  - component: {fileID: 3007111619677822772}
+  m_Layer: 6
   m_Name: trash1
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -131,3 +132,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3007111619677822772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305454378502379862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0223d715f10b141886837f01e10cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 2825297786739175788, guid: 99eabc987b93dc64cb3ce3bc9fac4e5c, type: 3}
