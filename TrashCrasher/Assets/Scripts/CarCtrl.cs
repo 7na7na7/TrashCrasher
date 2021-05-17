@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CarCtrl : MonoBehaviour
 {
+    private bool canBoost = false;
     public float boosterRegenSpeed = 1f;
     public float boosterCost = 5f;
     public Slider boosterGage;
@@ -30,7 +31,7 @@ public class CarCtrl : MonoBehaviour
  
     void Update()
     {
-        boosterGage.value += boosterRegenSpeed * Time.deltaTime;
+        
         movement = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.Q))
@@ -53,23 +54,32 @@ public class CarCtrl : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            canBoost = true;
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (boosterGage.value > 0)
+            
+            if (boosterGage.value > 0.1f)
             {
-                boosterGage.value -= Time.deltaTime * boosterCost;   
-                carRigidbody.AddForce(transform.right*boosterForce*Time.deltaTime);
+                if (canBoost)
+                {
+                    booster.SetActive(true);
+                    boosterGage.value -= Time.deltaTime * boosterCost;   
+                    carRigidbody.AddForce(transform.right*boosterForce*Time.deltaTime);
+                }
             }
-           
+            else
+            {
+                canBoost = false;
+                booster.SetActive(false);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            booster.SetActive(true);
-        }
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             booster.SetActive(false);
         }
+        boosterGage.value += boosterRegenSpeed * Time.deltaTime;
     }
 
     private void FixedUpdate()
