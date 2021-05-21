@@ -81,7 +81,12 @@ public class CarCtrl : MonoBehaviour
         }
         boosterGage.value += boosterRegenSpeed * Time.deltaTime;
     }
-
+public void SetForce(float force, Vector2 pos)
+{
+    Vector2 dir =  (Vector3) pos-transform.position;
+    dir.Normalize();
+    carRigidbody.velocity=new Vector2(carRigidbody.velocity.x-force*dir.x,carRigidbody.velocity.y-(force*dir.y)/2);
+}
     private void FixedUpdate()
     {
         if (carRigidbody.velocity.x <= MaxSpeed)

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Trash : MonoBehaviour
 {
+public float forceX=-0.5f;
     public int kilogram;
     public GameObject effect;
     // Start is called before the first frame update
@@ -15,15 +16,20 @@ public class Trash : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OnDisable()
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        FindObjectOfType<TrashMount>().Trash += kilogram;
+        if(other.gameObject.CompareTag("Player"))
+        {
+       
+            if(other.gameObject.transform.parent!=null)
+                other.gameObject.transform.parent.GetComponent<CarCtrl>().SetForce(forceX,transform.position);
+            else
+                other.gameObject.GetComponent<CarCtrl>().SetForce(forceX,transform.position);
+            FindObjectOfType<TrashMount>().Trash += kilogram;
             Instantiate(effect, transform.position, quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

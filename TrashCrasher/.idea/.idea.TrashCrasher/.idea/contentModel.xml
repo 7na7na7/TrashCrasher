@@ -15,7 +15,6 @@
           <e p="Head.cs" t="Include" />
           <e p="TireScript.cs" t="Include" />
           <e p="Trash.cs" t="Include" />
-          <e p="TrashDrain.cs" t="Include" />
           <e p="TrashMount.cs" t="Include" />
         </e>
       </e>
