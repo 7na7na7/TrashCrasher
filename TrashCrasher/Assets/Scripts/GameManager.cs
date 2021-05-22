@@ -20,17 +20,17 @@ public class GameManager : MonoBehaviour
     public Text[] lvTexts;
     public Text[] upgradeCostText;
 
-    private string tireKey = "0";
-    private string timingbelt = "1";
-    private string oilKey = "2";
-    private string bumperKey = "3";
-    private string buster = "4";
+    public int tireKey = 0;
+    public int timingbelt = 1;
+    public int oilKey = 2;
+    public int bumperKey = 3;
+    public int boosterKey = 4;
     public Spr[] sprites;
-    private int[] upgradecount = new int[5];
+    public int[] upgradecount = new int[5];
     private int[] upgradeCost = new int[3] {5000, 20000, 50000}; 
 
     public Image[] images;
-
+    public Image[] carImage;
 
     public void Upgrade(int index)
     {
@@ -50,6 +50,13 @@ public class GameManager : MonoBehaviour
             lvTexts[i].text = "Lv " + ((int)upgradecount[i] + 1).ToString();
             upgradeCostText[i].text = ((int)upgradeCost[upgradecount[i]]).ToString() + "G";
         }
+
+        carImage[0].sprite = images[tireKey].sprite;
+        carImage[1].sprite = images[tireKey].sprite;
+
+        carImage[2].sprite = images[boosterKey].sprite;
+
+        carImage[3].sprite = images[bumperKey].sprite;
     }
     #endregion //upgrade service
 

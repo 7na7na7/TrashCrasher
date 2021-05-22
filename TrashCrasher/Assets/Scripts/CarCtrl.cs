@@ -7,31 +7,74 @@ using UnityEngine.UI;
 public class CarCtrl : MonoBehaviour
 {
     private bool canBoost = false;
-    public float boosterRegenSpeed = 1f;
-    public float boosterCost = 5f;
+    public float boosterRegenSpeed = 6f;
+    public float boosterCost = 30f;
     public Slider boosterGage;
     public GameObject booster;
-    public float boosterForce=5f;
+    public float boosterForce=3000f;
     public bool isBack = true;
     public bool isFront = true;
-    public float jumpForce = 1000;
-    public float qeSpeed = 50f;
-    public float MaxSpeed = 10f;
-    public Rigidbody2D carRigidbody;
+    public float jumpForce = 2000;
+    public float qeSpeed = 700f;
+    public float MaxSpeed = 15f;
+    public float MaxFule = 100f;
+    public float MinusFule = 6f;
+   public Rigidbody2D carRigidbody;
     public Rigidbody2D backTire, frontTire;
     private float movement;
+    public CircleCollider2D[] tireCollider2D;
+   
+    public SpriteRenderer[] carSprites;
+    public Sprite[] tireSprites;
+    public Sprite[] boosterSprites;
+    public Sprite[] bumperSprite;
   //  public float carTorque = 10;
-    public float speed = 10;
+    public float speed = 200;
 
     void Start()
     {
         FindObjectOfType<CameraManager>().target = this.gameObject;
+
+        SetPerformance();
+        SetSprite();
     }
 
- 
+    void SetPerformance()
+    {
+        tireCollider2D[0].radius += GameManager.instance.upgradecount[GameManager.instance.tireKey] * 0.06f;
+        tireCollider2D[1].radius += GameManager.instance.upgradecount[GameManager.instance.tireKey] * 0.06f;
+
+        speed += GameManager.instance.upgradecount[GameManager.instance.timingbelt] * 150;
+        qeSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
+        MaxSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
+
+        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.timingbelt] * 2;
+
+        boosterForce += GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 1000;
+        boosterCost -= GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 3;
+    }
+
+    void SetSprite()
+    {
+        carSprites[0].sprite = GameManager.instance.images[GameManager.instance.tireKey].sprite;
+        carSprites[1].sprite = GameManager.instance.images[GameManager.instance.tireKey].sprite;
+
+        carSprites[2].sprite = GameManager.instance.images[GameManager.instance.boosterKey].sprite;
+       
+        carSprites[3].sprite = GameManager.instance.images[GameManager.instance.bumperKey].sprite;
+    }
+
     void Update()
     {
-        
+        if (MaxFule <= 0)
+        {
+            GameManager.instance.GameOver();
+        }
+        else
+        {
+            MaxFule -= MinusFule * Time.deltaTime;
+        }
+
         movement = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.Q))
