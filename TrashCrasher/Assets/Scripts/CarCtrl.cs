@@ -34,7 +34,6 @@ public class CarCtrl : MonoBehaviour
     void Start()
     {
         FindObjectOfType<CameraManager>().target = this.gameObject;
-
         SetPerformance();
         SetSprite();
     }
@@ -66,17 +65,19 @@ public class CarCtrl : MonoBehaviour
 
     void Update()
     {
+        bool fueld = false;
+        GameObject.Find("FuleSlider").GetComponent<Slider>().value= MaxFule;
         if (MaxFule <= 0)
         {
             GameManager.instance.GameOver();
         }
-        else
-        {
-            MaxFule -= MinusFule * Time.deltaTime;
-        }
 
         movement = Input.GetAxis("Horizontal");
-
+        if (movement != 0)
+        {
+            MaxFule -= MinusFule * Time.deltaTime;
+            fueld = true;
+        }
         if (Input.GetKey(KeyCode.Q))
         {
             if(!isBack && !isFront) 
@@ -101,7 +102,9 @@ public class CarCtrl : MonoBehaviour
             canBoost = true;
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            
+            if(!fueld)
+                MaxFule -= MinusFule * Time.deltaTime;
+            MaxFule -= MinusFule * Time.deltaTime;
             if (boosterGage.value > 0.1f)
             {
                 if (canBoost)
