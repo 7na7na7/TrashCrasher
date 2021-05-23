@@ -5,7 +5,7 @@ using UnityEngine;
 public class Distance : MonoBehaviour
 {
     private float startDistance = -999;
-    public float distance=0;
+    public static float distance=0;
     private Vector3 crrentpos;
     public float multiplyX;
     // Start is called before the first frame update

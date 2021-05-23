@@ -76,6 +76,8 @@ public class GoldManager : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
 
+        GetGold(Convert.ToInt32(trashWeight * 10 + moveDistance));
+
         while (PrevGold < Gold)
         {
             PrevGold++;

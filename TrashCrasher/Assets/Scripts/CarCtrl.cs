@@ -55,12 +55,12 @@ public class CarCtrl : MonoBehaviour
 
     void SetSprite()
     {
-        carSprites[0].sprite = GameManager.instance.images[GameManager.instance.tireKey].sprite;
-        carSprites[1].sprite = GameManager.instance.images[GameManager.instance.tireKey].sprite;
+        carSprites[0].sprite = tireSprites[GameManager.instance.tireKey];
+        carSprites[1].sprite = tireSprites[GameManager.instance.tireKey];
 
-        carSprites[2].sprite = GameManager.instance.images[GameManager.instance.boosterKey].sprite;
+        carSprites[2].sprite = boosterSprites[GameManager.instance.boosterKey];
        
-        carSprites[3].sprite = GameManager.instance.images[GameManager.instance.bumperKey].sprite;
+        carSprites[3].sprite = bumperSprite[GameManager.instance.bumperKey];
     }
 
     void Update()
@@ -102,9 +102,6 @@ public class CarCtrl : MonoBehaviour
             canBoost = true;
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if(!fueld)
-                MaxFule -= MinusFule * Time.deltaTime;
-            MaxFule -= MinusFule * Time.deltaTime;
             if (boosterGage.value > 0.1f)
             {
                 if (canBoost)

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TrashMount : MonoBehaviour
 {
-    public int Trash = 0;
+    public static int Trash = 0;
 
     private void Update()
     {

@@ -54,9 +54,9 @@ public class GameManager : MonoBehaviour
         carImage[0].sprite = images[tireKey].sprite;
         carImage[1].sprite = images[tireKey].sprite;
 
-        carImage[2].sprite = images[boosterKey].sprite;
+        carImage[2].sprite = images[bumperKey].sprite;
 
-        carImage[3].sprite = images[bumperKey].sprite;
+        carImage[3].sprite = images[boosterKey].sprite;
     }
     #endregion //upgrade service
 
@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
-    float trashWeight = 0.0f;
-    float moveDistance = 0.0f;
+    int trashWeight = 0;
+    float moveDistance = 0;
 
     void Awake()
     {
@@ -116,7 +116,17 @@ public class GameManager : MonoBehaviour
 
         UpgradePanelAnimator.SetBool("IsUp", false);
         ScorePannel.SetActive(true);
+
+        trashWeight = TrashMount.Trash;
+        moveDistance = Distance.distance;
+
         GoldManager.instance.CheckScore(trashWeight, moveDistance);
+
+        TrashMount.Trash = 0;
+        Distance.distance = 0;
+
+        trashWeight = 0;
+        moveDistance = 0;
     }
 
     public void AfterCheckScore()
