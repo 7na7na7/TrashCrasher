@@ -149,6 +149,10 @@ public void SetForce(float force, Vector2 pos)
             Destroy(other.gameObject);
             GoldManager.instance.GetGold(10);
         }
+        if (other.CompareTag("End"))
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
     }
 
     public void StopMovement()

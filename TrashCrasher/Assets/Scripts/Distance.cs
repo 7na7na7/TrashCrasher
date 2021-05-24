@@ -26,7 +26,7 @@ public class Distance : MonoBehaviour
         {
             if (FindObjectOfType<CarCtrl>() != null)
             {
-                transform.position=new Vector3(crrentpos.x+multiplyX*FindObjectOfType<CarCtrl>().transform.position.x,crrentpos.y);
+                transform.position=new Vector3(crrentpos.x+multiplyX*(FindObjectOfType<CarCtrl>().transform.position.x-startDistance),crrentpos.y);
                 distance = FindObjectOfType<CarCtrl>().transform.position.x-startDistance;
             }   
         }
