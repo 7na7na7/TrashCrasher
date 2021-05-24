@@ -18,7 +18,7 @@ public class CarCtrl : MonoBehaviour
     public float qeSpeed = 700f;
     public float MaxSpeed = 15f;
     public float MaxFule = 100f;
-    public float MinusFule = 6f;
+    public float MinusFule = 8f;
    public Rigidbody2D carRigidbody;
     public Rigidbody2D backTire, frontTire;
     private float movement;
@@ -47,7 +47,7 @@ public class CarCtrl : MonoBehaviour
         qeSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
         MaxSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
 
-        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.timingbelt] * 2;
+        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.timingbelt] * 3;
 
         boosterForce += GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 1000;
         boosterCost -= GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 3;
@@ -122,14 +122,15 @@ public class CarCtrl : MonoBehaviour
         {
             booster.SetActive(false);
         }
-        boosterGage.value += boosterRegenSpeed * Time.deltaTime;
     }
-public void SetForce(float force, Vector2 pos)
-{
-    Vector2 dir =  (Vector3) pos-transform.position;
-    dir.Normalize();
-    carRigidbody.velocity=new Vector2(carRigidbody.velocity.x-force*dir.x,carRigidbody.velocity.y-(force*dir.y)/2);
-}
+
+    public void SetForce(float force, Vector2 pos)
+    {
+        Vector2 dir = (Vector3)pos - transform.position;
+        dir.Normalize();
+        carRigidbody.velocity = new Vector2(carRigidbody.velocity.x - force * dir.x, carRigidbody.velocity.y - (force * dir.y) / 2);
+    }
+
     private void FixedUpdate()
     {
         if (carRigidbody.velocity.x <= MaxSpeed)
