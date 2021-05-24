@@ -59,7 +59,6 @@ public class CarCtrl : MonoBehaviour
         carSprites[1].sprite = tireSprites[GameManager.instance.tireKey];
 
         carSprites[2].sprite = boosterSprites[GameManager.instance.boosterKey];
-       
         carSprites[3].sprite = bumperSprite[GameManager.instance.bumperKey];
     }
 
@@ -117,7 +116,11 @@ public class CarCtrl : MonoBehaviour
                 booster.SetActive(false);
             }
         }
-
+        else
+        {
+            boosterGage.value += Time.deltaTime * boosterRegenSpeed;
+        }
+        
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             booster.SetActive(false);

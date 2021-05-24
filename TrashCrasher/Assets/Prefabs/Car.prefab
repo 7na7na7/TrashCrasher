@@ -349,7 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8737ec400d6841942bc07397c90e6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trash: 0
 --- !u!1 &1177315519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,10 +1285,10 @@ MonoBehaviour:
   isBack: 1
   isFront: 1
   jumpForce: 2000
-  qeSpeed: 700
+  qeSpeed: 1200
   MaxSpeed: 15
   MaxFule: 100
-  MinusFule: 8
+  MinusFule: 0.1
   carRigidbody: {fileID: 1669716124068237606}
   backTire: {fileID: 1669716124134439249}
   frontTire: {fileID: 1669716123294484696}
@@ -1313,7 +1312,7 @@ MonoBehaviour:
   - {fileID: -1423019807376266851, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
   - {fileID: -6185998330088389341, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
   - {fileID: 1855732101926705571, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
-  speed: 200
+  speed: 300
 --- !u!1 &1669716124134439260
 GameObject:
   m_ObjectHideFlags: 0
