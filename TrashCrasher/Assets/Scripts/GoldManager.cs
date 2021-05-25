@@ -62,17 +62,19 @@ public class GoldManager : MonoBehaviour
 
         float _moveDistance = 0;
 
-        while(_trashWeight < trashWeight)
+        yield return new WaitForSeconds(3.0f);
+
+        while (_trashWeight < trashWeight)
         {
             _trashWeight++;
-            weightText.text = _trashWeight.ToString();
+            weightText.text = _trashWeight.ToString() + "KG";
             yield return new WaitForSeconds(0.02f);
         }
 
         while (_moveDistance < moveDistance)
         {
             _moveDistance++;
-            distanceText.text = _moveDistance.ToString();
+            distanceText.text = _moveDistance.ToString() + "M";
             yield return new WaitForSeconds(0.02f);
         }
 
@@ -81,8 +83,8 @@ public class GoldManager : MonoBehaviour
         while (PrevGold < Gold)
         {
             PrevGold++;
-            goldText.text = PrevGold.ToString();
-            yield return new WaitForSeconds(0.02f);
+            goldText.text = PrevGold.ToString() + "G";
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }

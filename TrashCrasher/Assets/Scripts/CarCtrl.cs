@@ -66,6 +66,7 @@ public class CarCtrl : MonoBehaviour
     {
         bool fueld = false;
         GameObject.Find("FuleSlider").GetComponent<Slider>().value= MaxFule;
+        MaxFule -= MinusFule * Time.deltaTime;
         if (MaxFule <= 0)
         {
             GameManager.instance.GameOver();
@@ -74,7 +75,6 @@ public class CarCtrl : MonoBehaviour
         movement = Input.GetAxis("Horizontal");
         if (movement != 0)
         {
-            MaxFule -= MinusFule * Time.deltaTime;
             fueld = true;
         }
         if (Input.GetKey(KeyCode.Q))
@@ -116,10 +116,10 @@ public class CarCtrl : MonoBehaviour
                 booster.SetActive(false);
             }
         }
-        else
+        /*else
         {
             boosterGage.value += Time.deltaTime * boosterRegenSpeed;
-        }
+        }*/
         
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
