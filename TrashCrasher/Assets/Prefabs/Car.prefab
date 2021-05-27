@@ -1288,7 +1288,7 @@ MonoBehaviour:
   qeSpeed: 1200
   MaxSpeed: 15
   MaxFule: 100
-  MinusFule: 0.1
+  MinusFule: 8
   carRigidbody: {fileID: 1669716124068237606}
   backTire: {fileID: 1669716124134439249}
   frontTire: {fileID: 1669716123294484696}

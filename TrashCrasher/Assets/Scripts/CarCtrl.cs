@@ -47,7 +47,7 @@ public class CarCtrl : MonoBehaviour
         qeSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
         MaxSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
 
-        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.timingbelt] * 3;
+        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.oilKey] * 3;
 
         boosterForce += GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 1000;
         boosterCost -= GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 3;
