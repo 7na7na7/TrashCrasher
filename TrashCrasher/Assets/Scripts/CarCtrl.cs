@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class CarCtrl : MonoBehaviour
 {
+    private AudioSource source;
+    public AudioClip trashSound;
     private bool canBoost = false;
     public float boosterRegenSpeed = 6f;
     public float boosterCost = 30f;
@@ -33,6 +36,7 @@ public class CarCtrl : MonoBehaviour
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
         FindObjectOfType<CameraManager>().target = this.gameObject;
         SetPerformance();
         SetSprite();
@@ -132,6 +136,8 @@ public class CarCtrl : MonoBehaviour
         Vector2 dir = (Vector3)pos - transform.position;
         dir.Normalize();
         carRigidbody.velocity = new Vector2(carRigidbody.velocity.x - force * dir.x, carRigidbody.velocity.y - (force * dir.y) / 2);
+        source.pitch = 1 + Random.Range(-0.3f, 0.3f);
+        source.PlayOneShot(trashSound,0.5f);
     }
 
     private void FixedUpdate()

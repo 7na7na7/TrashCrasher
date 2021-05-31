@@ -8225,9 +8225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa07337eff21e045a6471e8a0162aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  pareallaxeffect: 0.1
-  check: 0
 --- !u!1001 &478338725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8820,7 +8817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f1b9ddd6b2492145be3ae91c5caf91f, type: 3}
   m_Name: 
@@ -11242,7 +11239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1590066706}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 3
@@ -13206,9 +13203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa07337eff21e045a6471e8a0162aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  pareallaxeffect: 0.15
-  check: 0
 --- !u!4 &683375944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4156438982643271761, guid: 17f902fa4934c5048846a9d257dd1651,
@@ -28379,7 +28373,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1590066706}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 3
@@ -29424,9 +29418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa07337eff21e045a6471e8a0162aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  pareallaxeffect: 0.05
-  check: 0
 --- !u!1001 &1371277310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35656,7 +35647,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1590066706}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 3
@@ -35849,9 +35840,9 @@ MonoBehaviour:
   - {fileID: 1797592870}
   tireKey: 0
   timingbelt: 1
-  oilKey: 1
-  bumperKey: 1
-  boosterKey: 1
+  oilKey: 2
+  bumperKey: 3
+  boosterKey: 4
   sprites:
   - sprs:
     - {fileID: 3159185530761366263, guid: 4e238a315c1b1424984504e2eaa84415, type: 3}
@@ -35933,7 +35924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1598616415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44985,7 +44976,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1590066706}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 3
@@ -46254,7 +46245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1590066706}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 3

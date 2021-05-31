@@ -14,6 +14,7 @@ public class GoldManager : MonoBehaviour
     public Text weightText;
     public Text distanceText;
     public Text goldText;
+    
 
     private void Awake()
     {
@@ -67,14 +68,14 @@ public class GoldManager : MonoBehaviour
         while (_trashWeight < trashWeight)
         {
             _trashWeight++;
-            weightText.text = _trashWeight.ToString() + "KG";
+            weightText.text = "처리한 쓰레기 량 : "+_trashWeight.ToString() + "KG";
             yield return new WaitForSeconds(0.02f);
         }
 
         while (_moveDistance < moveDistance)
         {
-            _moveDistance++;
-            distanceText.text = _moveDistance.ToString() + "M";
+            _moveDistance+=1f;
+            distanceText.text = "이동 거리 : "+_moveDistance.ToString() + "M";
             yield return new WaitForSeconds(0.02f);
         }
 
@@ -83,7 +84,7 @@ public class GoldManager : MonoBehaviour
         while (PrevGold < Gold)
         {
             PrevGold++;
-            goldText.text = PrevGold.ToString() + "G";
+            goldText.text = "골드 : "+PrevGold.ToString() + "G";
             yield return new WaitForSeconds(0.01f);
         }
     }

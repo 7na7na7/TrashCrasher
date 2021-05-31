@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     #region
     public Text[] lvTexts;
     public Text[] upgradeCostText;
-
     public int tireKey = 0;
     public int timingbelt = 1;
     public int oilKey = 2;
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         if (upgradecount[index] + 1 < sprites[index].sprs.Length && upgradeCost[upgradecount[index]] < GoldManager.instance.Gold)
         {
+            GoldManager.instance.LoseGold(upgradeCost[upgradecount[index]]);
             upgradecount[index]++;
             PlayerPrefs.SetInt(index.ToString(), upgradecount[index]);
             set();
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         goldText.text = "남은 돈 : " + GoldManager.instance.Gold + " G";
-
+        GameObject.Find("MoveDistance").GetComponent<Text>().text =  (int)Distance.distance+"M";
     }
 
     public void StartGame()

@@ -10,9 +10,11 @@
           <e p="CameraManager.cs" t="Include" />
           <e p="CarCtrl.cs" t="Include" />
           <e p="DelayDestroy.cs" t="Include" />
+          <e p="Distance.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GoldManager.cs" t="Include" />
           <e p="Head.cs" t="Include" />
+          <e p="Scrolling.cs" t="Include" />
           <e p="TireScript.cs" t="Include" />
           <e p="Trash.cs" t="Include" />
           <e p="TrashMount.cs" t="Include" />
