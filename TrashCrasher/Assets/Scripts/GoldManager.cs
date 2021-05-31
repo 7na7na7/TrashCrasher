@@ -67,7 +67,7 @@ public class GoldManager : MonoBehaviour
 
         while (_trashWeight < trashWeight)
         {
-            _trashWeight++;
+            _trashWeight+=1f;
             weightText.text = "처리한 쓰레기 량 : "+_trashWeight.ToString() + "KG";
             yield return new WaitForSeconds(0.02f);
         }

@@ -34,6 +34,8 @@ public class CarCtrl : MonoBehaviour
   //  public float carTorque = 10;
     public float speed = 200;
 
+    bool callGameOverOnce = false;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -59,11 +61,11 @@ public class CarCtrl : MonoBehaviour
 
     void SetSprite()
     {
-        carSprites[0].sprite = tireSprites[GameManager.instance.tireKey];
-        carSprites[1].sprite = tireSprites[GameManager.instance.tireKey];
-
-        carSprites[2].sprite = boosterSprites[GameManager.instance.boosterKey];
-        carSprites[3].sprite = bumperSprite[GameManager.instance.bumperKey];
+        carSprites[0].sprite = tireSprites[GameManager.instance.upgradecount[GameManager.instance.tireKey]];
+        carSprites[1].sprite = tireSprites[GameManager.instance.upgradecount[GameManager.instance.tireKey]];
+        
+        carSprites[2].sprite = boosterSprites[GameManager.instance.upgradecount[GameManager.instance.boosterKey]];
+        carSprites[3].sprite = bumperSprite[GameManager.instance.upgradecount[GameManager.instance.bumperKey]];
     }
 
     void Update()
@@ -71,8 +73,9 @@ public class CarCtrl : MonoBehaviour
         bool fueld = false;
         GameObject.Find("FuleSlider").GetComponent<Slider>().value= MaxFule;
         MaxFule -= MinusFule * Time.deltaTime;
-        if (MaxFule <= 0)
+        if (MaxFule <= 0 && !callGameOverOnce)
         {
+            callGameOverOnce = true;
             GameManager.instance.GameOver();
         }
 
