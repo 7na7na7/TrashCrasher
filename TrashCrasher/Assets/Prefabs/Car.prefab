@@ -1283,7 +1283,7 @@ MonoBehaviour:
   boosterCost: 30
   boosterGage: {fileID: 1897611329}
   booster: {fileID: 7732942004555960091}
-  boosterForce: 3000
+  boosterForce: 4500
   isBack: 1
   isFront: 1
   jumpForce: 2000
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   - {fileID: -1423019807376266851, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
   - {fileID: -6185998330088389341, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
   - {fileID: 1855732101926705571, guid: 251bd28e88f6249418fe2bdf66e11f30, type: 3}
-  speed: 300
+  speed: 400
 --- !u!82 &8444293729025001384
 AudioSource:
   m_ObjectHideFlags: 0

@@ -51,7 +51,7 @@ public class CarCtrl : MonoBehaviour
         qeSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
         MaxSpeed *= GameManager.instance.upgradecount[GameManager.instance.timingbelt] + 1;
 
-        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.oilKey] * 3;
+        MinusFule -= GameManager.instance.upgradecount[GameManager.instance.oilKey] * 3.4f;
 
         boosterForce += GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 1000;
         boosterCost -= GameManager.instance.upgradecount[GameManager.instance.boosterKey] * 3;
@@ -161,7 +161,7 @@ public class CarCtrl : MonoBehaviour
         }
         if (other.CompareTag("End"))
         {
-            FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameManager>().Clear();
         }
     }
 

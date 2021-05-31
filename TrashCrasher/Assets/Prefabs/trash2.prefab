@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9219766490186049344}
   m_Layer: 6
   m_Name: trash2
-  m_TagString: Respawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0223d715f10b141886837f01e10cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceX: 8
+  forceX: 3
   kilogram: 7
   effect: {fileID: 2825297786739175788, guid: 99eabc987b93dc64cb3ce3bc9fac4e5c, type: 3}
 --- !u!70 &9219766490186049344

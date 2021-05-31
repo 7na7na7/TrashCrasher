@@ -12,6 +12,8 @@ public class Spr
 }
 public class GameManager : MonoBehaviour
 {
+    public AudioClip clearclip;
+    public AudioSource source;
     public Text goldText;
 
     public GameObject playButton;
@@ -128,10 +130,32 @@ public class GameManager : MonoBehaviour
         trashWeight = 0;
         moveDistance = 0;
     }
+    public void Clear()
+    {
+        source.PlayOneShot(clearclip);
+        GameObject.Find("Clear").GetComponent<Text>().text = "CLEAR!";
+        playButton.SetActive(true);
+        PlayerCar.GetComponent<CarCtrl>().StopMovement();
+
+        UpgradePanelAnimator.SetBool("IsUp", false);
+        ScorePannel.SetActive(true);
+
+        trashWeight = TrashMount.Trash;
+        moveDistance = Distance.distance;
+
+        GoldManager.instance.CheckScore(trashWeight, moveDistance);
+
+        TrashMount.Trash = 0;
+        Distance.distance = 0;
+
+        trashWeight = 0;
+        moveDistance = 0;
+    }
 
     public void AfterCheckScore()
     {
         ScorePannel.SetActive(false);
+        GameObject.Find("Clear").GetComponent<Text>().text = "";
     }
 
 }
